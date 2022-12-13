@@ -1105,7 +1105,6 @@ export function Dashboard() {
             }
             i++;
           }
-          console.log("TEST GRADES: ");
           //
           TimeLineComponent = (
             <GroupedTimeLine

@@ -3,10 +3,7 @@ export async function loginHelpdesk(
   urlLogin: string,
   type: boolean
 ) {
-  console.log("urlclave:", urlLogin);
   const dataHelpdesk = urlLogin.slice(3, -3).split(",");
-  console.log("url:", dataHelpdesk[0]);
-  console.log("pass:", dataHelpdesk[1]);
   var code: string = "";
   const url = dataHelpdesk[0]?.length ? dataHelpdesk[0] : "";
 

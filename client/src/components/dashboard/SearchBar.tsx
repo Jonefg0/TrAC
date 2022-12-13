@@ -108,11 +108,10 @@ export const SearchBar: FC<{
       var userFullName = user?.name ? user.name : "";
       var name: string = "";
       var lastName: string = "";
-      var userFullNameArray = [""];
       if (userFullName.includes(" ")) {
-        userFullNameArray = userFullName.split(" ");
-        name = userFullNameArray[0] ? userFullNameArray[0] : "";
-        lastName = userFullNameArray[1] ? userFullNameArray[1] : "";
+        const pos = userFullName.indexOf(" ");
+        name = userFullName.substring(0, pos);
+        lastName = userFullName.substring(pos + 1);
       } else {
         name = user?.name ? user.name : "";
       }
